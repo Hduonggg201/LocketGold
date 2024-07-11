@@ -6,14 +6,14 @@ http:
 header_rewrites:
 - delete:
     match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
-    name: X-RevenueCat-ETag
+    name: "X-RevenueCat-ETag"
     type: request
 - delete:
     match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
-    name: x-revenuecat-etag
+    name: "x-revenuecat-etag"
     type: request
 script:
-    name: Locket_Gold_AQVPN
+    name: "Locket_Gold_AQVPN"
     match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
     script_url: https://download.aqvpn.eu.org/script/apptesters/Locket_Gold.js
     update_interval: 5
