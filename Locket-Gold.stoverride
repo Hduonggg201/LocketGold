@@ -3,7 +3,7 @@ desc: Premium
 icon: https://play-lh.googleusercontent.com/eRZLg00mAQGayCrFjDBklPIpW3qFHcmUs8PUQA4z7hVe-cDKMcRqecVHONAIexJGJZM
 http: 
 
-header_rewrites:
+header-rewrite:
 - delete:
     match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
     name: "X-RevenueCat-ETag"
