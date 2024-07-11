@@ -13,10 +13,14 @@ header_rewrites:
     name: "x-revenuecat-etag"
     type: request
 script:
-    name: "Locket_Gold_AQVPN"
     match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
-    script_url: https://download.aqvpn.eu.org/script/apptesters/Locket_Gold.js
-    update_interval: 5
-    body_required: true
+    name: "Locket_Gold_AQVPN"
+    require-body: true
+    max-size: -1
+    binary-mode: true
+script-providers:
+  "Locket_Gold_AQVPN":
+    url: https://download.aqvpn.eu.org/script/apptesters/Locket_Gold.js
+    interval: 86400
 mitm:
   - "api.revenuecat.com"
